@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The divine Institue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7a44cf37ee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ----------------------------navbar------------------- -->
+
+    <nav>
+        <h2 class="logo">The divine Institute</h2>
+        <div class="navlist">
+            <ul>
+                <li class="hide-on-mobile"><a href="home.html">Home</a></li>
+                <li class="hide-on-mobile"><a href="our cources.html">All Cources</a></li>
+                <li class="hide-on-mobile"><a href="about.html">About</a></li>
+                <li class="hide-on-mobile"><a href="contact-us.html">Contact</a></li>
+                <li class="menubtn" onclick=showSidebar()><a href="#"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li onclick=hideSidebar()><a href="#"><i class="fa fa-times"></i></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="our cources.html">All Cources</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- ---------------------------main body------------------------ -->
+<div class="image-container" id="backblur">
+    <div class="image-slider">
+        <div class="slide active">
+            <img src="images/office.jpeg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/programming.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/python.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/tallyprime.webp" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/web development.jpg" alt="">
+        </div>
+
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+
+</div>
+
+    </header>
+    <section class="mission">
+        
+    <div class="head">
+        <h1>Our Mission</h1>
+    </div>
+        <ol type="1">
+            <div class="aim">
+            <img src="images/aim.jpg" alt="">
+            </div>
+            <div class="content">
+            <li> "At The Divine Institue", our fundamental belief is that computer knowledge should be accessible to
+                everyone, regardless of background or prior experience. We are dedicated to breaking down barriers and
+                making the world of technology open and understandable for all.</li>
+
+            <li><strong>Inclusive Learning Opportunities: </strong>We strive to create inclusive and welcoming learning
+                environments where individuals from all walks of life can comfortably explore and embrace the world of
+                computers. </li>
+
+            <li><strong>Simplified Learning Pathways:</strong> Recognizing the complexity often associated with computer
+                knowledge, we are committed to presenting information in a clear, straightforward manner. Our curriculum
+                is designed to demystify complex concepts, making them accessible to learners at every level. </li>
+
+            <li><strong>Affordable Education: </strong>We are committed to providing affordable education, minimizing
+                financial barriers to access. Scholarships, payment plans, and other options are available to ensure
+                that cost is not a hindrance to obtaining computer knowledge.</li>
+            <li> Our vision is a world where everyone has the opportunity to harness the power of computers with
+                confidence. By making computer knowledge accessible and easy to understand, we aim to empower
+                individuals to navigate the digital landscape with proficiency and enthusiasm, contributing to their
+                personal and professional growth."
+            </li>
+        </ol>
+    </div>
+</section>
+
+        
+
+    <section class="staff">
+
+        <h2>Our Staff</h2>
+        <div class="staff-row">
+            <div class="staff-col">
+                <img src="images/mishra.jpg" alt="">
+                <h3>Owner</h3>
+                <p>Mr. Vineet Mishra</p>
+            </div>
+            <div class="staff-col">
+                <img src="images/teacher.jpg" alt="">
+            <h3>Instructor</h3>
+            <p>Mr. Ganesh Bisht</p>
+            </div>
+            <div class="staff-col">
+                <img src="images/kaushal.jpg" alt="">
+                <h3>In-Charge</h3>
+                <p>Mr. Kaushal Arya</p>
+            </div>
+        </div>
+    </section>
+
+
+     
+
+    <!-- ------------------------javascript--------------------------------- -->
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+
+
+    //javascript for image manual  navigation//
+
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+
+    let currentSlide = 1;
+
+    var manualNav =function(manual){
+        slides.forEach((slide) =>{
+            slide.classList.remove('active');
+       btns.forEach((btn) => {
+        btn.classList.remove('active')
+       })
+        })
+
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+    }
+    
+    btns.forEach((btn,i) => {
+       
+        btn.addEventListener("click",() => {
+            manualNav(i);
+        currentSlide =i; 
+        })
+      
+    });
+
+
+   //javascript for image autoplay//
+
+   var repeat = function(activeClass){
+    let active = document.getElementsByClassName('active');
+    let i =1;
+
+    var repeater = () =>{
+        setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+            });
+    
+            slides[i].classList.add('active');
+            btns[i].classList.add('active');
+            i++;
+
+            if(slides.length ==i){
+                i =0 ;
+            }
+            if(i >= slides.length){
+                return;
+            }
+            repeater(); 
+        },5000);
+    }
+    repeater();
+   }
+   repeat ();
+
+    </script>
+
+</body>
+
+</html>

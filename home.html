@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The divine Institue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7a44cf37ee.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <!-- ----------------------------navbar------------------- -->
+
+
+
+    <!-- ---------------------------main body------------------------ -->
+
+    <section class="header">
+        <nav>
+        <h2 class="logo">The divine Institute</h2>
+        <div class="navlist">
+            <ul>
+                <li class="hide-on-mobile"><a href="home.html">Home</a></li>
+                <li class="hide-on-mobile"><a href="our cources.html">All Cources</a></li>
+                <li class="hide-on-mobile"><a href="about.html">About</a></li>
+                <li class="hide-on-mobile"><a href="contact-us.html">Contact</a></li>
+                <li class="menubtn" onclick=showSidebar()><a href="#"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li onclick= hideSidebar()><a href="#"><i class="fa fa-times"></i></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="our cources.html">All Cources</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    
+    </nav>
+
+    <div class="text-box">
+        <h1>The Divine Institue</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, error.</p>
+        <a href="about.html" class= "button1">Visit Us to Know More</a>
+    </div>
+    
+    </section>
+
+    <!-- --------------------------------our popular cources----------------------- -->
+  <div class="wrapper">
+    <h1>Our Popular Cources</h1>
+    
+    <div class="container">
+       
+        <div class="box">
+        <img src="images/adca.jpg" alt="">
+        <h3>Basic Computer cource</h3>
+        <p>Duration : 6 Months</p>
+        <a href="#"class="button1">See more</a>
+        </div>
+
+        <div class="box">
+            <img src="images/advance.jpg" alt="">
+            <h3>Advance Excel</h3>
+            <p>Duration : 6 Months</p>
+            <a href="#"class="button1">See more</a>
+        </div>
+    
+
+        <div class="box">
+        <img src="images/office.jpeg" alt="">
+        <h3>Micrsoft Office For Proffesional</h3>
+        <p>Duration : 1 Year</p>
+        <a href="#"class="button1">See more</a>
+        </div>
+
+        <div class="box">
+        <img src="images/tallyprime.webp" alt="">
+        <h3>Tally Prime With Gst</h3>
+        <p>Duration : 1 Year</p>
+        <a href="#"class="button1">See more</a>
+        </div>
+        
+        <div class="box">
+        <img src="images/web development.jpg" alt="">
+        <h3>Full Web development</h3>
+        <p>Duration : 1 Year</p>
+        <a href="#"class="button1">See more</a>
+        </div>
+
+        <div class="box">
+        <img src="images/python.jpg" alt="">
+        <h3>Phython</h3>
+        <p>Duration : 6 Months</p>
+        <a href="#"class="button1">See more</a>
+        </div>
+
+       
+
+      
+  </div>
+
+<!-- ================================== footer =========================== -->
+
+<footer>
+   <div class="cta">
+    <h1>Enroll For Our Various Cources and accelerate Your carrier</h1>
+    <a href="#" class="button1">Click Here</a>
+</div>  
+    <div class="footer">
+<h4>About Us</h4>
+<p>Want to know More about us?<br> click the icon below to know more about us </p>
+    <div class="icon">
+    <i class="fa fa-facebook"></i> 
+    <i class="fa fa-instagram"></i> 
+    <i class="fa fa-twitter"></i> 
+    <i class="fa fa-linkedin"></i> 
+    </div>
+</div>
+</footer>
+
+<!-- ------------------------javascript--------------------------------- -->
+<script>
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar') 
+    sidebar.style.display ='flex'
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar') 
+    sidebar.style.display ='none'
+}
+
+</script>
+
+</body>
+
+</html>

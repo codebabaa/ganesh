@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The divine Institue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7a44cf37ee.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <!-- ----------------------------navbar------------------- -->
+
+    <nav>
+        <h2 class="logo">The divine Institute</h2>
+        <div class="navlist">
+            <ul>
+                <li class="hide-on-mobile"><a href="home.html">Home</a></li>
+                <li class="hide-on-mobile"><a href="our cources.html">All Cources</a></li>
+                <li class="hide-on-mobile"><a href="about.html">About</a></li>
+                <li class="hide-on-mobile"><a href="contact-us.html">Contact</a></li>
+                <li class="menubtn" onclick=showSidebar()><a href="#"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li onclick= hideSidebar()><a href="#"><i class="fa fa-times"></i></a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">All Cources</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    
+    </nav>
+
+    <!-- ---------------------------main body------------------------ -->
+
+    <header class="main-body allc">
+    </header>
+
+    <!-- --------------------------------our popular cources----------------------- -->
+    <div class="wrapper">
+        <h1>Our Popular Cources</h1>
+        
+        <div class="container">
+           
+            <div class="box">
+            <img src="images/basic1.jpg" alt="">
+            <h3>Basic Computer cource</h3>
+            <p>Duration : 6 Months</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+            
+            <div class="box">
+            <img src="images/typing.jpg" alt="">
+            <h3>Typing </h3>
+            <p>Duration : 4 Months</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+
+    
+            <div class="box">
+            <img src="images/office.jpeg" alt="">
+            <h3>Micrsoft Office for Professional</h3>
+            <p>Duration : 1 Year</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+            <div class="box">
+            <img src="images/advance.jpg" alt="">
+            <h3>Advance Excel</h3>
+            <p>Duration : 6 Months</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+            <div class="box">
+            <img src="images/adca.jpg" alt="">
+            <h3>Advance Diploma in Computer Application</h3>
+            <p>Duration : 1 Year</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+
+            <div class="box">
+            <img src="images/dca.jpg" alt="">
+            <h3>Diploma in Computer Application</h3>
+            <p>Duration : 1 Year</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+            <div class="box">
+            <img src="images/ccc.jpg" alt="">
+            <h3>CCC</h3>
+            <p>Duration : 3 Months</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+            <div class="box">
+            <img src="images/ps.jpg" alt="">
+            <h3>Photoshop</h3>
+            <p>Duration : 3 Months</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+            <div class="box">
+            <img src="images/web development.jpg" alt="">
+            <h3>Full Web development</h3>
+            <p>Duration : 1 Year</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+            <div class="box">
+            <img src="images/python.jpg" alt="">
+            <h3>Phython</h3>
+            <p>Duration : 1 Year</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+            <div class="box">
+            <img src="images/javascript.png" alt="">
+            <h3>javascript</h3>
+            <p>Duration : 1 Year</p>
+            <a href="#"class="button1">See more</a>
+            </div>
+    
+          
+      </div>
+
+
+<!-- ================================== footer =========================== -->
+
+<footer>
+   <div class="cta">
+    <h1>Enroll For Our Various Cources and accelerate Your carrier</h1>
+    <a href="#" class="button1">Click Here</a>
+</div>  
+    <div class="footer">
+    <div class="icon">
+    <i class="fa fa-facebook"></i> 
+    <i class="fa fa-instagram"></i> 
+    <i class="fa fa-twitter"></i> 
+    <i class="fa fa-linkedin"></i> 
+    </div>
+</div>
+</footer>
+
+<!-- ------------------------javascript--------------------------------- -->
+<script>
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar') 
+    sidebar.style.display ='flex'
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar') 
+    sidebar.style.display ='none'
+}
+
+</script>
+
+</body>
+
+</html>
