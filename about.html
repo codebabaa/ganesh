@@ -12,7 +12,6 @@
 <body>
     <!-- ----------------------------navbar------------------- -->
 
-    <section class="header">
         <nav>
         <h2 class="logo">The divine Institute</h2>
         <div class="navlist">
@@ -37,36 +36,7 @@
     </nav>
 
     <!-- ---------------------------main body------------------------ -->
-<div class="image-container" id="backblur">
-    <div class="image-slider">
-        <div class="slide active">
-            <img src="images/office.jpeg" alt="">
-        </div>
-        <div class="slide">
-            <img src="images/programming.jpg" alt="">
-        </div>
-        <div class="slide">
-            <img src="images/python.jpg" alt="">
-        </div>
-        <div class="slide">
-            <img src="images/tallyprime.webp" alt="">
-        </div>
-        <div class="slide">
-            <img src="images/web development.jpg" alt="">
-        </div>
 
-        <div class="navigation">
-            <div class="btn active"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-        </div>
-    </div>
-
-</div>
-
-    </header>
     <section class="mission">
         
     <div class="head">
@@ -99,13 +69,13 @@
             </li>
         </ol>
     </div>
-</section>
+
 
         
 
     <section class="staff">
 
-        <h2>Our Staff</h2>
+        <h1>Our Staff</h1>
         <div class="staff-row">
             <div class="staff-col">
                 <img src="images/mishra.jpg" alt="">
@@ -138,65 +108,6 @@
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
-
-
-    //javascript for image manual  navigation//
-
-    var slides = document.querySelectorAll('.slide');
-    var btns = document.querySelectorAll('.btn');
-
-    let currentSlide = 1;
-
-    var manualNav =function(manual){
-        slides.forEach((slide) =>{
-            slide.classList.remove('active');
-       btns.forEach((btn) => {
-        btn.classList.remove('active')
-       })
-        })
-
-        slides[manual].classList.add('active');
-        btns[manual].classList.add('active');
-    }
-    
-    btns.forEach((btn,i) => {
-       
-        btn.addEventListener("click",() => {
-            manualNav(i);
-        currentSlide =i; 
-        })
-      
-    });
-
-
-   //javascript for image autoplay//
-
-   var repeat = function(activeClass){
-    let active = document.getElementsByClassName('active');
-    let i =1;
-
-    var repeater = () =>{
-        setTimeout(function(){
-            [...active].forEach((activeSlide) => {
-                activeSlide.classList.remove('active');
-            });
-    
-            slides[i].classList.add('active');
-            btns[i].classList.add('active');
-            i++;
-
-            if(slides.length ==i){
-                i =0 ;
-            }
-            if(i >= slides.length){
-                return;
-            }
-            repeater(); 
-        },5000);
-    }
-    repeater();
-   }
-   repeat ();
 
     </script>
 

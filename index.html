@@ -16,7 +16,6 @@
 
     <!-- ---------------------------main body------------------------ -->
 
-    <section class="header">
         <nav>
         <h2 class="logo">The divine Institute</h2>
         <div class="navlist">
@@ -39,14 +38,39 @@
         </div>
     
     </nav>
+<!-- =====================================img slide =========================== -->
 
-    <div class="text-box">
-        <h1>The Divine Institue</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, error.</p>
-        <a href="about.html" class= "button1">Visit Us to Know More</a>
+
+<div class="image-container">
+    <div class="image-slider">
+        <div class="slide active">
+            <img src="images/slide  1.jpg" alt="">
+        </div>
+     
+        <div class="slide">
+            <img src="images/slide 2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/slide 3.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/slide 4.jpg" alt="">
+        </div>
+
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
     </div>
+
+</div>
+
+<!-- =================================img slide end========================= -->
     
-    </section>
+
 
     <!-- --------------------------------our popular cources----------------------- -->
   <div class="wrapper">
@@ -131,6 +155,66 @@ function hideSidebar(){
     const sidebar = document.querySelector('.sidebar') 
     sidebar.style.display ='none'
 }
+
+
+//javascript for image manual  navigation//
+
+var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+
+    let currentSlide = 1;
+
+    var manualNav =function(manual){
+        slides.forEach((slide) =>{
+            slide.classList.remove('active');
+       btns.forEach((btn) => {
+        btn.classList.remove('active')
+       })
+        })
+
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+    }
+    
+    btns.forEach((btn,i) => {
+       
+        btn.addEventListener("click",() => {
+            manualNav(i);
+        currentSlide =i; 
+        })
+      
+    });
+
+
+   //javascript for image autoplay//
+
+   var repeat = function(activeClass){
+    let active = document.getElementsByClassName('active');
+    let i =1;
+
+    var repeater = () =>{
+        setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+            });
+    
+            slides[i].classList.add('active');
+            btns[i].classList.add('active');
+            i++;
+
+            if(slides.length ==i){
+                i =0 ;
+            }
+            if(i >= slides.length){
+                return;
+            }
+            repeater(); 
+        },5000);
+    }
+    repeater();
+   }
+   repeat ();
+
 
 </script>
 
