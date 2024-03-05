@@ -4,6 +4,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    transition: all ease 0.2s;
 
 }
 
@@ -195,27 +196,43 @@ nav {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: #ffffff3f;
-    box-shadow: -10px 0 10px rgba(19, 18, 18, 0);
+    background-color: rgb(95, 97, 97);
+    box-shadow: -10px 0 10px rgba(255, 254, 254, 0.171);
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    backdrop-filter: blur(10px);
 }
 
-.sidebar li {
+.sidebar ul {
     width: 100%;
 }
+.sidebar ul :first-child{
+    text-align: left;
+
+}
+.sidebar ul :first-child:hover{
+    background: none;
+}
+
 
 .sidebar ul li {
     padding: 15px 20px;
+    cursor: pointer;
+
 }
 
-.sidebar ul li a {
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    width: 100%;
+.sidebar ul li .fa{
+    margin-right: 15px;
+    color: white;
+}
+.sidebar ul li span{
+    color: rgb(241, 241, 241);
+}
+
+
+.sidebar ul li:hover{
+    background:rgb(190, 190, 190);
 }
 
 .menubtn {
